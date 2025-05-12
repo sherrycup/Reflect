@@ -131,6 +131,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Dreflect\any.cpp" />
+    <ClCompile Include="src\Dreflect\make_any.cpp" />
+    <ClCompile Include="src\Log\Log.cpp" />
+    <ClCompile Include="src\test\test_any.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\head\any.h" />
+    <ClInclude Include="src\Log\Log.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
