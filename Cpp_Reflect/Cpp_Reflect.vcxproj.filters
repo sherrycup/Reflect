@@ -18,9 +18,6 @@
     <ClCompile Include="src\Dreflect\any.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\Dreflect\make_any.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="src\Log\Log.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -29,7 +26,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\head\any.h">
+    <ClInclude Include="src\head\any.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\Log\Log.h">

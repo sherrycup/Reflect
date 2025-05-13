@@ -108,6 +108,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -132,12 +134,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Dreflect\any.cpp" />
-    <ClCompile Include="src\Dreflect\make_any.cpp" />
     <ClCompile Include="src\Log\Log.cpp" />
     <ClCompile Include="src\test\test_any.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\head\any.h" />
+    <ClInclude Include="src\head\any.hpp" />
     <ClInclude Include="src\Log\Log.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
