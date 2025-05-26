@@ -44,5 +44,14 @@
     <ClInclude Include="src\traits\field_trait.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\head\type.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sreflect\static_register.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sreflect\sref_method.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

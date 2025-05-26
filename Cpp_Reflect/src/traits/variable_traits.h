@@ -1,6 +1,6 @@
 #pragma once
 #include<type_traits>
-namespace detail
+namespace Reflect
 {
 	template<typename T>
 	struct variable_trait_t
@@ -27,19 +27,19 @@ namespace detail
 }
 
 template<typename T>
-struct variable_trait : detail::basic_variables_traits<T>
+struct variable_trait : Reflect::basic_variables_traits<T>
 {
 
 };
 
 template<typename T>
-struct variable_trait<T*> : detail::basic_variables_traits<T>
+struct variable_trait<T*> : Reflect::basic_variables_traits<T>
 {
 	using pointer_type = T*;
 };
 
 template<typename T, typename Clazz>
-struct variable_trait <T(Clazz::*)> : detail::basic_variables_traits<T(Clazz::*)>
+struct variable_trait <T(Clazz::*)> : Reflect::basic_variables_traits<T(Clazz::*)>
 {
 	using pointer_type = T(Clazz::*);
 	using clazz_type = Clazz;

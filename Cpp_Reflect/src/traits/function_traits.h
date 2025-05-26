@@ -3,7 +3,7 @@
 #include<type_traits>
 #include<tuple>
 
-namespace detail
+namespace Reflect
 {
 	template<typename Ret, typename... Args>
 	struct basic_function_trait;
@@ -20,7 +20,7 @@ template<typename func>
 struct function_trait;
 
 template<typename Ret, typename... Args>
-struct function_trait<Ret(*)(Args...)> : detail::basic_function_trait<Ret(Args...)>
+struct function_trait<Ret(*)(Args...)> : Reflect::basic_function_trait<Ret(Args...)>
 {
 	using type = Ret(Args...);
 	using class_with_args = std::tuple<Args...>;
@@ -30,7 +30,7 @@ struct function_trait<Ret(*)(Args...)> : detail::basic_function_trait<Ret(Args..
 };
 
 template<typename Ret,typename Clazz, typename... Args>
-struct function_trait<Ret(Clazz::*)(Args...)> : detail::basic_function_trait<Ret(Args...)>
+struct function_trait<Ret(Clazz::*)(Args...)> : Reflect::basic_function_trait<Ret(Args...)>
 {
 	using type = Ret(Clazz::*)(Args...);
 	using class_with_args = std::tuple<Clazz*,Args...>;
@@ -40,7 +40,7 @@ struct function_trait<Ret(Clazz::*)(Args...)> : detail::basic_function_trait<Ret
 };
 
 template<typename Ret, typename Clazz, typename... Args>
-struct function_trait<Ret(Clazz::*)(Args...) const> : detail::basic_function_trait<Ret(Args...)>
+struct function_trait<Ret(Clazz::*)(Args...) const> : Reflect::basic_function_trait<Ret(Args...)>
 {
 	using type = Ret(Clazz::*)(Args...) const;
 	using class_with_args = std::tuple<Clazz*, Args...>;

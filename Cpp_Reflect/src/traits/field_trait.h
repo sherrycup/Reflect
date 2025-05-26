@@ -1,8 +1,11 @@
-#pragma once
+﻿#pragma once
+#include<string>
+#include<tuple>
+
 #include"function_traits.h"
 #include"variable_traits.h"
 
-namespace detail
+namespace Reflect
 {
 	template<typename T,bool isFunc>
 	struct baisc_field_trait;
@@ -24,6 +27,13 @@ namespace detail
 		using trait = variable_trait<T>;
 	};
 
+	enum Access
+	{
+		Public,
+		Private,
+		Protected
+	};
+
 }
 
 template<typename T>
@@ -33,13 +43,53 @@ struct traits_is_func
 };
 
 template<typename T>
-struct field_trait : detail::baisc_field_trait<T, traits_is_func<T>::value>
+struct field_trait : public Reflect::baisc_field_trait<T, traits_is_func<T>::value>
 {
-	field_trait(T&& pointer)
-		:pointer(pointer)
+	constexpr field_trait(T&& pointer, std::string_view name, Reflect::Access access)
+		:pointer(pointer), name(name.substr(name.find_last_of(":") + 1)), access(access)
 	{
 
 	}
 
 	T pointer;
+	std::string_view name;
+	Reflect::Access access;
+
 };
+
+template<typename T>
+struct TypeInfo{};
+
+// C++ 17 CTAD 自动推导类型T
+// 宏定义全态化模板
+#define Reflectable(X) friend TypeInfo<X>; using selfType = X;
+
+
+#define Begin_Class(X) template<> struct TypeInfo<X> {
+	
+
+#define functions(...)	\
+	static constexpr auto functions = std::make_tuple(##__VA_ARGS__); \
+	static constexpr size_t func_size = std::tuple_size_v<decltype(functions)>;
+
+#define variables(...) \
+	static constexpr auto variables = std::make_tuple(##__VA_ARGS__); \
+	static constexpr size_t var_size = std::tuple_size_v<decltype(variables)>;
+
+
+#define func_public(F) \
+	field_trait {F, #F, Reflect::Access::Public}
+#define func_private(F) \
+	field_trait {F, #F, Reflect::Access::Private}
+#define func_protected(F) \
+	field_trait {F, #F, Reflect::Access::Protected}
+
+#define var_public(V) \
+	field_trait {V, #V, Reflect::Access::Public}
+#define var_private(V) \
+	field_trait {V, #V, Reflect::Access::Private}
+#define var_protected(V) \
+	field_trait {V, #V, Reflect::Access::Protected}
+
+#define End_Class() }; 
+

@@ -110,6 +110,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -140,7 +141,10 @@
   <ItemGroup>
     <ClInclude Include="src\head\any.hpp" />
     <ClInclude Include="src\head\test.h" />
+    <ClInclude Include="src\head\type.hpp" />
     <ClInclude Include="src\Log\Log.h" />
+    <ClInclude Include="src\Sreflect\sref_method.hpp" />
+    <ClInclude Include="src\Sreflect\static_register.hpp" />
     <ClInclude Include="src\traits\field_trait.h" />
     <ClInclude Include="src\traits\function_traits.h" />
     <ClInclude Include="src\traits\variable_traits.h" />
