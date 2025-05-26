@@ -1,6 +1,15 @@
-#pragma once
+ï»¿#pragma once
+#include<string>
+// å­˜æ”¾æµ‹è¯•ç”¨å¤´æ–‡ä»¶æˆ–ä»£ç 
 
-// ´æ·Å²âÊÔÓÃÍ·ÎÄ¼ş»ò´úÂë
+class test
+{
+public:
+	int a;
+	std::string s;
 
-
+private:
+	float b;
+	char c;
+};
 

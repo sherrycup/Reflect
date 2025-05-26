@@ -139,7 +139,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\head\any.hpp" />
+    <ClInclude Include="src\head\test.h" />
     <ClInclude Include="src\Log\Log.h" />
+    <ClInclude Include="src\traits\field_trait.h" />
+    <ClInclude Include="src\traits\function_traits.h" />
+    <ClInclude Include="src\traits\variable_traits.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

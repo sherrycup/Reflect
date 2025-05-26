@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include"Log/Log.h"
+#include"traits/field_trait.h"
 
 namespace Reflect
 {
@@ -81,7 +82,8 @@ namespace Reflect
 		};
 
         void print() {
-            LOG_INFO(*(int*)payload);
+            //
+            //LOG_INFO(*str);
         }
 
 		any(void* payload, type_access store, type_operations* ops);
@@ -96,7 +98,7 @@ namespace Reflect
 
 	};
 
-    // 声明友元函数，在make_any中实现
+    // 声明友元函数实现
     template<typename T> any make_any_copy(const T& value)
     {
         LOG_INFO("拷贝生成any");
@@ -107,9 +109,30 @@ namespace Reflect
         type_operations ops = type_operation_traits<T>::get_operations();
         return { elem,any::Copy, &ops };
     }
-    template<typename T> any make_any_ref(T& value);
-    template<typename T> const any make_any_cref(const T& value);
-    template<typename T> T* cast_any(any& a);
+    template<typename T> any make_any_ref(T& value)
+    {
+        LOG_INFO("引用生成any");
+        void* elem = nullptr;
+        elem = (void*)&value;
+
+        type_operations ops = type_operation_traits<T>::get_operations();
+        return { elem, any::Ref, &ops };
+    }
+    template<typename T> const any make_any_cref(const T& value)
+    {
+        LOG_INFO("常量引用生成any");
+        void* elem = nullptr;
+        elem = (void*)&value;
+
+        type_operations ops = type_operation_traits<T>::get_operations();
+        return { elem, any::CRef, &ops };
+    }
+    template<typename T> T* cast_any(any& a)
+    {
+        // 如果能转换的判定
+
+        return  static_cast<T*>(a.payload);
+    }
     template<typename T> T* cast_any_const(const any& a);
 
 }

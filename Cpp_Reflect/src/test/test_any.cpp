@@ -1,7 +1,13 @@
 ﻿#include "head/any.hpp"
 #include<Windows.h>
 #include <iostream>
+#include "head/test.h"
 
+
+void print(int a,int b, char c, float d)
+{
+
+}
 int main()
 {
 	SetConsoleOutputCP(CP_UTF8);
@@ -9,8 +15,12 @@ int main()
 	std::cout << "Hello World！" << std::endl;
 	LOG_INFO("对的对的");
 
-	int a = 2;
-	Reflect::any num = Reflect::make_any_copy<int>(a);
-	num.print();
+
+	auto tem = field_trait<decltype(&print)>::param_count();
+	LOG_INFO(tem);
+	LOG_INFO("结束");
+
+
+
 	return 0;
 }

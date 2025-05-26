@@ -32,5 +32,17 @@
     <ClInclude Include="src\Log\Log.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\traits\variable_traits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\head\test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\traits\function_traits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\traits\field_trait.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

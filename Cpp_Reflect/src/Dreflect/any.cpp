@@ -8,4 +8,9 @@ namespace Reflect
 
 	}
 
+	any::any(const any& other)
+		:payload()
+	{
+
+	}
 }
