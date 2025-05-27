@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include"traits/field_trait.h"
+#include"Traits/field_trait.hpp"
 #include"head/test.h"
 
 // 静态注册器

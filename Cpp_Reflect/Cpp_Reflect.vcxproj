@@ -143,11 +143,22 @@
     <ClInclude Include="src\head\test.h" />
     <ClInclude Include="src\head\type.hpp" />
     <ClInclude Include="src\Log\Log.h" />
+    <ClInclude Include="src\Dreflect\register.hpp" />
     <ClInclude Include="src\Sreflect\sref_method.hpp" />
     <ClInclude Include="src\Sreflect\static_register.hpp" />
-    <ClInclude Include="src\traits\field_trait.h" />
-    <ClInclude Include="src\traits\function_traits.h" />
-    <ClInclude Include="src\traits\variable_traits.h" />
+    <ClInclude Include="src\Traits\field_trait.hpp" />
+    <ClInclude Include="src\Traits\function_traits.hpp" />
+    <ClInclude Include="src\Traits\utils.hpp" />
+    <ClInclude Include="src\Traits\variable_traits.hpp" />
+    <ClInclude Include="src\Type\Bool.hpp" />
+    <ClInclude Include="src\Type\Class.hpp" />
+    <ClInclude Include="src\Type\Enum.hpp" />
+    <ClInclude Include="src\Type\Factory.hpp" />
+    <ClInclude Include="src\Type\GFunc.hpp" />
+    <ClInclude Include="src\Type\Numeric.hpp" />
+    <ClInclude Include="src\Type\TypeFactory.hpp" />
+    <ClInclude Include="src\Type\TypenameList.hpp" />
+    <ClInclude Include="src\Type\Void.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

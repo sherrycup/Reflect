@@ -7,48 +7,92 @@
       "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\test\\test_any.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Sreflect\\sref_method.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Sreflect\\sref_method.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Factory.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Type\\Factory.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\traits\\field_trait.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\traits\\field_trait.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Dreflect\\register.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Dreflect\\register.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Sreflect\\sref_method.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Sreflect\\sref_method.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Sreflect\\static_register.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Sreflect\\static_register.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\traits\\variable_traits.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\traits\\variable_traits.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Log\\Log.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Log\\Log.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\test.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\head\\test.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\TypeFactory.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Type\\TypeFactory.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\traits\\function_traits.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\traits\\function_traits.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Numeric.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Type\\Numeric.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\TypenameList.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Type\\TypenameList.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Bool.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Type\\Bool.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Enum.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Type\\Enum.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Class.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Type\\Class.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Void.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Type\\Void.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\type.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\head\\type.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\any.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\head\\any.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\GFunc.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Type\\GFunc.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\traits\\field_trait.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\traits\\field_trait.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Dreflect\\any.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Dreflect\\any.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\test.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\head\\test.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\any.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\head\\any.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Log\\Log.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Log\\Log.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Log\\Log.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Log\\Log.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\variable_traits.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Traits\\variable_traits.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\utils.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Traits\\utils.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\function_traits.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3199653-43ED-45B9-A40D-533D8A9F0064}|Cpp_Reflect\\Cpp_Reflect.vcxproj|solutionrelative:Cpp_Reflect\\src\\Traits\\function_traits.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
@@ -68,6 +112,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\vendor\\spdlog\\include\\spdlog\\spdlog.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Cpp_Reflect\\vendor\\spdlog\\include\\spdlog\\spdlog.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\traits\\field_trait.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Cpp_Reflect\\src\\traits\\field_trait.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\traits\\function_traits.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Cpp_Reflect\\src\\traits\\function_traits.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\traits\\variable_traits.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Cpp_Reflect\\src\\traits\\variable_traits.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -77,7 +133,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -89,41 +145,28 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TypeFactory.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\TypeFactory.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Type\\TypeFactory.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\TypeFactory.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Type\\TypeFactory.hpp",
+              "ViewState": "AgIAADUAAAAAAAAAAAAswEUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-27T09:12:29.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "sref_method.hpp",
-              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Sreflect\\sref_method.hpp",
-              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Sreflect\\sref_method.hpp",
-              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Sreflect\\sref_method.hpp",
-              "RelativeToolTip": "Cpp_Reflect\\src\\Sreflect\\sref_method.hpp",
-              "ViewState": "AgIAADUAAAAAAAAAAAAowEoAAAAJAAAAAAAAAA==",
+              "Title": "Factory.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Factory.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Type\\Factory.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Factory.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Type\\Factory.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-26T08:50:23.343Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "static_register.hpp",
-              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Sreflect\\static_register.hpp",
-              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Sreflect\\static_register.hpp",
-              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Sreflect\\static_register.hpp",
-              "RelativeToolTip": "Cpp_Reflect\\src\\Sreflect\\static_register.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-26T06:25:36.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "field_trait.h",
-              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\traits\\field_trait.h",
-              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\traits\\field_trait.h",
-              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\traits\\field_trait.h",
-              "RelativeToolTip": "Cpp_Reflect\\src\\traits\\field_trait.h",
-              "ViewState": "AgIAADUAAAAAAAAAAAAowE4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-25T19:25:39.586Z",
+              "WhenOpened": "2025-05-27T10:17:29.131Z",
               "EditorCaption": ""
             },
             {
@@ -134,74 +177,155 @@
               "RelativeDocumentMoniker": "Cpp_Reflect\\src\\test\\test_any.cpp",
               "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\test\\test_any.cpp*",
               "RelativeToolTip": "Cpp_Reflect\\src\\test\\test_any.cpp*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB8AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-12T16:51:58.086Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
+              "Title": "Log.cpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Log\\Log.cpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Log\\Log.cpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Log\\Log.cpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Log\\Log.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-12T16:51:37.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "register.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Dreflect\\register.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Dreflect\\register.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Dreflect\\register.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Dreflect\\register.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-27T10:30:31.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "sref_method.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Sreflect\\sref_method.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Sreflect\\sref_method.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Sreflect\\sref_method.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Sreflect\\sref_method.hpp",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-26T08:50:23.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "static_register.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Sreflect\\static_register.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Sreflect\\static_register.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Sreflect\\static_register.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Sreflect\\static_register.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-26T06:25:36.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Numeric.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Numeric.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Type\\Numeric.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Numeric.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Type\\Numeric.hpp",
+              "ViewState": "AgIAABMAAAAAAAAAAAAYwBYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-26T18:06:14.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TypenameList.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\TypenameList.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Type\\TypenameList.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\TypenameList.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Type\\TypenameList.hpp",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAowBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-27T18:51:53.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Bool.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Bool.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Type\\Bool.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Bool.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Type\\Bool.hpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-26T18:55:35.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Enum.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Enum.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Type\\Enum.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Enum.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Type\\Enum.hpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-26T18:55:14.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Class.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Class.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Type\\Class.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Class.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Type\\Class.hpp",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-26T18:55:02.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "field_trait.h",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\field_trait.h",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Traits\\field_trait.h",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\field_trait.h",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Traits\\field_trait.h",
+              "ViewState": "AgIAADUAAAAAAAAAAAAowE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-25T19:25:39.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "function_traits.h",
-              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\traits\\function_traits.h",
-              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\traits\\function_traits.h",
-              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\traits\\function_traits.h",
-              "RelativeToolTip": "Cpp_Reflect\\src\\traits\\function_traits.h",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\function_traits.h",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Traits\\function_traits.h",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\function_traits.h",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Traits\\function_traits.h",
               "ViewState": "AgIAABgAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-05-25T18:42:06.372Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "test.h",
-              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\test.h",
-              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\head\\test.h",
-              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\test.h",
-              "RelativeToolTip": "Cpp_Reflect\\src\\head\\test.h",
-              "ViewState": "AgIAABEAAAAAAAAAAAAYwBwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-12T19:30:30.664Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "variable_traits.h",
-              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\traits\\variable_traits.h",
-              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\traits\\variable_traits.h",
-              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\traits\\variable_traits.h",
-              "RelativeToolTip": "Cpp_Reflect\\src\\traits\\variable_traits.h",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-19T19:33:11.372Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "type.hpp",
-              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\type.hpp",
-              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\head\\type.hpp",
-              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\type.hpp",
-              "RelativeToolTip": "Cpp_Reflect\\src\\head\\type.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-26T06:07:49.294Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "spdlog.h",
-              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\vendor\\spdlog\\include\\spdlog\\spdlog.h",
-              "RelativeDocumentMoniker": "Cpp_Reflect\\vendor\\spdlog\\include\\spdlog\\spdlog.h",
-              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\vendor\\spdlog\\include\\spdlog\\spdlog.h",
-              "RelativeToolTip": "Cpp_Reflect\\vendor\\spdlog\\include\\spdlog\\spdlog.h",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-12T16:50:13.933Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 24,
               "Title": "README.md",
               "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\vendor\\spdlog\\README.md",
               "RelativeDocumentMoniker": "Cpp_Reflect\\vendor\\spdlog\\README.md",
@@ -213,17 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "__msvc_bit_utils.hpp",
-              "DocumentMoniker": "E:\\VS\\VS\\VC\\Tools\\MSVC\\14.39.33519\\include\\__msvc_bit_utils.hpp",
-              "ToolTip": "E:\\VS\\VS\\VC\\Tools\\MSVC\\14.39.33519\\include\\__msvc_bit_utils.hpp",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAvwGQAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-12T18:32:08.464Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 23,
               "Title": ".gitignore",
               "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -235,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 26,
               "Title": "format-inl.h",
               "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\vendor\\spdlog\\include\\spdlog\\fmt\\bundled\\format-inl.h",
               "RelativeDocumentMoniker": "Cpp_Reflect\\vendor\\spdlog\\include\\spdlog\\fmt\\bundled\\format-inl.h",
@@ -246,24 +360,94 @@
               "WhenOpened": "2025-05-12T17:12:00.813Z"
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "__msvc_bit_utils.hpp",
+              "DocumentMoniker": "E:\\VS\\VS\\VC\\Tools\\MSVC\\14.39.33519\\include\\__msvc_bit_utils.hpp",
+              "ToolTip": "E:\\VS\\VS\\VC\\Tools\\MSVC\\14.39.33519\\include\\__msvc_bit_utils.hpp",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAvwGQAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-12T18:32:08.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "spdlog.h",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\vendor\\spdlog\\include\\spdlog\\spdlog.h",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\vendor\\spdlog\\include\\spdlog\\spdlog.h",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\vendor\\spdlog\\include\\spdlog\\spdlog.h",
+              "RelativeToolTip": "Cpp_Reflect\\vendor\\spdlog\\include\\spdlog\\spdlog.h",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-12T16:50:13.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "variable_traits.h",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\variable_traits.h",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Traits\\variable_traits.h",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\variable_traits.h",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Traits\\variable_traits.h",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-19T19:33:11.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Void.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Void.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Type\\Void.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\Void.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Type\\Void.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-26T18:55:26.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "type.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\type.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\head\\type.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\type.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\head\\type.hpp",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAC0AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-26T06:07:49.294Z"
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d3750d8a-574b-4fb3-b7e2-aa8af40e8231}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "any.hpp",
-              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\any.hpp",
-              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\head\\any.hpp",
-              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\any.hpp",
-              "RelativeToolTip": "Cpp_Reflect\\src\\head\\any.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "GFunc.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\GFunc.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Type\\GFunc.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Type\\GFunc.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Type\\GFunc.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-12T16:52:12.016Z"
+              "WhenOpened": "2025-05-26T18:55:45.94Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
+              "Title": "field_trait.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\field_trait.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Traits\\field_trait.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\field_trait.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Traits\\field_trait.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-27T09:09:17.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "any.cpp",
               "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Dreflect\\any.cpp",
               "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Dreflect\\any.cpp",
@@ -275,7 +459,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
+              "Title": "test.h",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\test.h",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\head\\test.h",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\test.h",
+              "RelativeToolTip": "Cpp_Reflect\\src\\head\\test.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-12T19:30:30.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "any.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\any.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\head\\any.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\head\\any.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\head\\any.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-12T16:52:12.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "Log.h",
               "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Log\\Log.h",
               "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Log\\Log.h",
@@ -287,15 +495,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Log.cpp",
-              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Log\\Log.cpp",
-              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Log\\Log.cpp",
-              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Log\\Log.cpp",
-              "RelativeToolTip": "Cpp_Reflect\\src\\Log\\Log.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-12T16:51:37.984Z"
+              "DocumentIndex": 20,
+              "Title": "variable_traits.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\variable_traits.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Traits\\variable_traits.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\variable_traits.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Traits\\variable_traits.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-27T09:09:42.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "utils.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\utils.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Traits\\utils.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\utils.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Traits\\utils.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-27T09:09:41.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "function_traits.hpp",
+              "DocumentMoniker": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\function_traits.hpp",
+              "RelativeDocumentMoniker": "Cpp_Reflect\\src\\Traits\\function_traits.hpp",
+              "ToolTip": "D:\\Dev\\Cpp\\Cpp_Reflect\\cpp-reflect\\Cpp_Reflect\\src\\Traits\\function_traits.hpp",
+              "RelativeToolTip": "Cpp_Reflect\\src\\Traits\\function_traits.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-27T09:09:41.03Z"
             }
           ]
         }

@@ -32,16 +32,16 @@
     <ClInclude Include="src\Log\Log.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\traits\variable_traits.h">
+    <ClInclude Include="src\Traits\variable_traits.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\head\test.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\traits\function_traits.h">
+    <ClInclude Include="src\Traits\function_traits.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\traits\field_trait.h">
+    <ClInclude Include="src\Traits\field_trait.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\head\type.hpp">
@@ -51,6 +51,39 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\Sreflect\sref_method.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Type\Numeric.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Type\Class.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Type\Enum.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Type\Void.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Type\Bool.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Type\GFunc.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Traits\utils.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Type\TypeFactory.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Type\Factory.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dreflect\register.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Type\TypenameList.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include<string>
-#include"traits/field_trait.h"
+#include"Traits/field_trait.hpp"
 // 存放测试用头文件或代码
 
 class test

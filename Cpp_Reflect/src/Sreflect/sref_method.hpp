@@ -2,7 +2,7 @@
 #include <vector>
 #include <tuple>
 #include <string>
-#include "traits/field_trait.h"
+#include "Traits/field_trait.hpp"
 
 namespace Reflect
 {
@@ -66,7 +66,8 @@ namespace Reflect
 
 	/*
 	获取所有字段 同java getDeclearedField
-*/
+	希望显示变量名时，同时显示变量类型
+	*/
 	template< typename... Args, size_t... Idx>
 	std::vector<std::string_view> getDeclearedField(const std::tuple<Args...>& tuple, std::index_sequence<Idx...>)
 	{
@@ -80,4 +81,5 @@ namespace Reflect
 
 		return nameList;
 	}
+
 }

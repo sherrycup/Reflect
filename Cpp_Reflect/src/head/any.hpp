@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include"Log/Log.h"
-#include"traits/field_trait.h"
+#include"Traits/field_trait.hpp"
+#include"type.hpp"
 
 namespace Reflect
 {
@@ -95,7 +96,7 @@ namespace Reflect
 		void* payload;
 		type_access store;
 		type_operations* ops;
-
+        Type* typeinfo{};
 	};
 
     // 声明友元函数实现
