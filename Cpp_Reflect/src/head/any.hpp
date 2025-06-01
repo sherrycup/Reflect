@@ -1,10 +1,15 @@
 ﻿#pragma once
+
 #include"Log/Log.h"
 #include"Traits/field_trait.hpp"
 #include"type.hpp"
 
 namespace Reflect
 {
+    template<typename T>
+    const Type* GetType();
+
+    class Numeric;
 
     struct type_operations final {
         using destroy_fn = void(*)(void*);
@@ -73,6 +78,8 @@ namespace Reflect
 		template<typename T>
 		friend T* cast_any_const(const any&);
 
+        friend std::ostream& operator<<(std::ostream& os, const any& elem);
+
 		enum type_access
 		{
 			Copy,
@@ -82,21 +89,33 @@ namespace Reflect
 
 		};
 
+
+
         void print() {
             //
             //LOG_INFO(*str);
         }
 
-		any(void* payload, type_access store, type_operations* ops);
+		any(void* payload,const Type* typeinfo, type_access store, type_operations* ops);
         any() = default;
 		any(const any&);
 		any(any&&);
         ~any() {}
+
+        const Type* getTypeInfo() const
+        {
+            return typeinfo;
+        }
+
+        void* getPayload()
+        {
+            return payload;
+        }
 	private:
 		void* payload;
 		type_access store;
 		type_operations* ops;
-        Type* typeinfo{};
+        const Type* typeinfo{};
 	};
 
     // 声明友元函数实现
@@ -108,7 +127,7 @@ namespace Reflect
         elem = new T{ value };
 
         type_operations ops = type_operation_traits<T>::get_operations();
-        return { elem,any::Copy, &ops };
+        return { elem, GetType<T>(),any::Copy, &ops};
     }
     template<typename T> any make_any_ref(T& value)
     {
@@ -117,7 +136,7 @@ namespace Reflect
         elem = (void*)&value;
 
         type_operations ops = type_operation_traits<T>::get_operations();
-        return { elem, any::Ref, &ops };
+        return { elem,GetType<T>(), any::Ref, &ops };
     }
     template<typename T> const any make_any_cref(const T& value)
     {
@@ -126,7 +145,7 @@ namespace Reflect
         elem = (void*)&value;
 
         type_operations ops = type_operation_traits<T>::get_operations();
-        return { elem, any::CRef, &ops };
+        return { elem,GetType<T>(), any::CRef, &ops };
     }
     template<typename T> T* cast_any(any& a)
     {
@@ -136,4 +155,42 @@ namespace Reflect
     }
     template<typename T> T* cast_any_const(const any& a);
 
+
+
+    // 输出流操作符重载实现
+    std::ostream& operator<<(std::ostream& os, const any& elem) {
+        if (elem.getTypeInfo()){
+            switch (elem.getTypeInfo()->getKind())
+            {
+            case Type::Numeric:
+                os << elem.getTypeInfo()->asNumeric()->getRealValue();
+            case Type::Enum:
+
+                break;
+            case Type::Class:
+
+                break;
+            case Type::GFunc:
+
+                break;
+			case Type::Bool:
+
+                break;
+            case Type::Void:
+
+                break;
+            case Type::String:
+
+                break;
+            default:
+                break;
+            }
+        }
+    else {
+        os << "<empty any>";
+        }
+        return os;
 }
+}
+
+

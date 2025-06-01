@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include<string>
-
+#include"Log/Log.h"
 namespace Reflect
 {
 	// 声明子类
@@ -59,13 +59,17 @@ namespace Reflect
 				return nullptr;
 			}
 		}
+
 		std::string getName() const { return name_; }
+
+		Type::Kind getKind() const { return this->kind_; }
 		//void setName(const std::string& name) { this->name_ = name; }
 		
 		virtual std::string to_string() const
 		{
 			return "Type " + name_;
 		}
+
 	protected:
 
 

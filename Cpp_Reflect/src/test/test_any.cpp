@@ -54,6 +54,17 @@ int main()
 	std::cout << temp3->to_string() << std::endl;
 
 
+	int ref = 123;
+	Reflect::Register<int>().setName("ref");
+	Reflect::any test_any = Reflect::make_any_ref<int>(ref);
+	
+	Reflect::GetType("ref")->asNumeric()->setValue(10, test_any);
+
+	std::cout << ref << std::endl;
+
+	Reflect::GetType("ref")->asNumeric()->setValue(50, test_any);
+
+	std::cout << ref << std::endl;
 
 	LOG_INFO(tem);
 	LOG_INFO("结束");
