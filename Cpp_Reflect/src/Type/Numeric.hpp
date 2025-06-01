@@ -26,20 +26,28 @@ namespace Reflect
 
 		}
 
+
 		std::string getName() const
 		{
 			return Type::name_;
 		}
 
+		/*
 		void setName(const std::string& name)
 		{
 			Type::name_ = name;
+		}
+		*/
+
+		std::string to_string() const override
+		{
+			return detectName(kind_) + " " + this->getName();
 		}
 
 		template<typename T>
 		static Numeric Create()
 		{
-			return { "init Numeric" ,getKind<T>() , std::is_unsigned_v<T>};
+			return { "" ,getKind<T>() , std::is_unsigned_v<T>};
 		}
 	protected:
 
@@ -47,7 +55,7 @@ namespace Reflect
 		Kind kind_;
 		bool is_signed_;
 
-		/*
+
 		static std::string detectName(Kind kind)
 		{
 			switch (kind)
@@ -70,7 +78,7 @@ namespace Reflect
 				return "Unknown";
 			}
 		}
-		*/
+
 		template<typename T>
 		static Kind getKind()
 		{

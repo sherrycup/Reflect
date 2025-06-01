@@ -29,3 +29,5 @@ struct remove_const_pointer
 {
 	using type =typename remove_pointer<typename remove_const<T>::type>::type;
 };
+
+

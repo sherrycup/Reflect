@@ -33,6 +33,7 @@ template<typename Ret,typename Clazz, typename... Args>
 struct function_trait<Ret(Clazz::*)(Args...)> : Reflect::basic_function_trait<Ret(Args...)>
 {
 	using type = Ret(Clazz::*)(Args...);
+	using clazz_type = Clazz;
 	using class_with_args = std::tuple<Clazz*,Args...>;
 	using pointer_type = Ret(Clazz::*)(Args...);
 	static constexpr bool is_member = true;
@@ -43,6 +44,7 @@ template<typename Ret, typename Clazz, typename... Args>
 struct function_trait<Ret(Clazz::*)(Args...) const> : Reflect::basic_function_trait<Ret(Args...)>
 {
 	using type = Ret(Clazz::*)(Args...) const;
+	using clazz_type = Clazz;
 	using class_with_args = std::tuple<Clazz*, Args...>;
 	using pointer_type = Ret(Clazz::*)(Args...)const;
 	static constexpr bool is_member = true;

@@ -29,17 +29,32 @@ int main()
 	Reflect::Register<decltype(zyd)>().setName("zyd");
 
 	auto temp = Reflect::GetType("zyd");
-	std::cout << temp->getName() << std::endl;
+	std::cout << temp->to_string() << std::endl;
 	enum  s {
 		aa = 1,
 		bb = 2
 	};
 
+	test Test = test(1,"hahaha");
+	// 注册类对象
+	Reflect::Register<test>().setName("Test").addVariable<decltype(&test::a)>("a").addVariable<decltype(&test::test_float)>("test_float");
+	Reflect::Register<test>().addFunction<decltype(&test::output_num)>("output_num").addFunction<decltype(&test::plus)>("plus");
+	auto temp2 = Reflect::GetType("Test");
+	std::cout << temp2->to_string() << std::endl;
+
 	auto temp1 = Reflect::Register<s>().setName("s").getInfo();
 	auto y = Reflect::GetType("s");
-	std::cout << temp1->getName() << std::endl;
-	std::cout << y->getName() << std::endl;
+	std::cout << temp1->to_string() << std::endl;
+	std::cout << y->to_string() << std::endl;
 	auto tem = field_trait<decltype(&print)>::param_count();
+
+	std::string text = "卓一刀";
+	Reflect::Register<decltype(text)>().setName("text");
+	auto temp3 = Reflect::GetType("text");
+	std::cout << temp3->to_string() << std::endl;
+
+
+
 	LOG_INFO(tem);
 	LOG_INFO("结束");
 

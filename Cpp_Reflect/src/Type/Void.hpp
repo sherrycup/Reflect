@@ -16,14 +16,21 @@ namespace Reflect
 			return Type::name_;
 		}
 
+		/*
 		void setName(const std::string& name)
 		{
 			Type::name_ = name;
 		}
+		*/
+
+		std::string to_string() const override
+		{
+			return "Void " + this->getName();
+		}
 
 		static Void Create()
 		{
-			return { "init Void" };
+			return { "" };
 		}
 	protected:
 

@@ -156,6 +156,7 @@
     <ClInclude Include="src\Type\Factory.hpp" />
     <ClInclude Include="src\Type\GFunc.hpp" />
     <ClInclude Include="src\Type\Numeric.hpp" />
+    <ClInclude Include="src\Type\String.hpp" />
     <ClInclude Include="src\Type\TypeFactory.hpp" />
     <ClInclude Include="src\Type\TypenameList.hpp" />
     <ClInclude Include="src\Type\Void.hpp" />

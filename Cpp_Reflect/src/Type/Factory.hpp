@@ -1,4 +1,4 @@
-#pragma once
+Ôªø#pragma once
 #include "TypeFactory.hpp"
 
 
@@ -16,15 +16,28 @@ namespace Reflect
 			}
 			else if constexpr (std::is_void_v<T>)
 			{
-
+				return VoidFactory::GetInstance();
 			}
-			else if constexpr (std::is_fundamental_v<T>)	// «∞¡ΩœÓ“—æ≠≈≈≥˝bool”Îvoid
+			else if constexpr (std::is_same_v<T, std::string>)
+			{
+				return StringFactory::GetInstance();
+			}
+			else if constexpr (std::is_fundamental_v<T>)	// Ââç‰∏§È°πÂ∑≤ÁªèÊéíÈô§bool‰∏évoid
 			{
 				return NumericFactory<T>::GetInstance();
 			}
 			else if constexpr (std::is_enum_v<T>)
 			{
 				return EnumFactory::GetInstance();
+			}
+			else if constexpr (std::is_class_v<T>)
+			{
+				return ClassFactory::GetInstace();
+			}
+			else
+			{
+				std::cout << "ÈùûÊ≥ïÁ±ªÂûã" << std::endl;
+				return VoidFactory::GetInstance();
 			}
 		}
 	};

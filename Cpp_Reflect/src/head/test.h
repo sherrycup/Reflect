@@ -9,6 +9,7 @@ public:
 	// 静态反射许可
 	Reflectable(test);
 	int a;
+	float test_float;
 	std::string s;
 	test(int a, std::string s)
 		:a(a), s(s)
@@ -16,7 +17,7 @@ public:
 
 	}
 
-	int output_num()
+	int output_num(float x)
 	{
 		return this->a + this->s.length();
 	}
