@@ -37,10 +37,10 @@ int main()
 
 	test Test = test(1,"hahaha");
 	// 注册类对象
-	Reflect::Register<test>().setName("Test").addVariable<decltype(&test::a)>("a").addVariable<decltype(&test::test_float)>("test_float");
+	/*Reflect::Register<test>().setName("Test").addVariable<decltype(&test::a)>("a").addVariable<decltype(&test::test_float)>("test_float");
 	Reflect::Register<test>().addFunction<decltype(&test::output_num)>("output_num").addFunction<decltype(&test::plus)>("plus");
 	auto temp2 = Reflect::GetType("Test");
-	std::cout << temp2->to_string() << std::endl;
+	std::cout << temp2->to_string() << std::endl;*/
 
 	auto temp1 = Reflect::Register<s>().setName("s").getInfo();
 	auto y = Reflect::GetType("s");
@@ -71,7 +71,14 @@ int main()
 	LOG_INFO(tem);
 	LOG_INFO("结束");
 
+	Person person("nmsl", 30, 10);
+	Reflect::Register<Person>().setName("person").addVariable("name", &Person::name).addVariable("age", &Person::age)
+		.addVariable("id", &Person::id);
 
-
+	auto xxxxx = Reflect::GetType("person");
+	auto var = xxxxx->asClass()->getVariable("age")->call({ Reflect::make_any_ref(person) });
+	std::cout << var << std::endl;
+	xxxxx->asClass()->getVariable("age")->call({ Reflect::make_any_ref(person), Reflect::make_any_copy(20)});
+	std::cout << xxxxx->asClass()->getVariable("age")->call({ Reflect::make_any_ref(person) }) << std::endl;
 	return 0;
 }

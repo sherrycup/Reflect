@@ -3,6 +3,7 @@
 #include "head/any.hpp"
 #include<vector> 
 #include<memory>
+#include<variant>
 
 namespace Reflect
 {
@@ -14,29 +15,203 @@ namespace Reflect
 	{
 	public:
 		virtual ~Member() = default;
-		virtual any call(std::vector<any>& args) = 0;
+
+		/*	关于call函数
+		*	参数形式为(class& obj, param...)
+		*	第一个参数为实例对象，后面的参数为函数所需的参数
+		*/
+		virtual any call(const std::vector<any>& args) = 0;
 		virtual std::string to_string() const = 0;
+
+		virtual std::string getName() const
+		{
+			return  "No name";
+		}
+
 	};
 
 	template<typename T, typename Clazz>
 	class MemberVariable : public Member
 	{
 	public:
-		any call(std::vector<any>& args) override
+		/*
+			目前只实现call函数的get和set
+			get 一个实例参数  size = 1
+			set 一个实例参数 一个赋值参数 size = 2
+		*/
+		any call(const std::vector<any>& anies) override
 		{
-			return make_any_copy<int>(1);
+			// 判定大小在1-2之间 且第一个参数是类实例
+			assert(anies.size()!=0 && anies.size()<=2 && anies[0].getTypeInfo() == GetType<Clazz>());
+			Clazz* instance = (Clazz*)anies[0].getPayload();	// 强转
+			if (anies.size() == 1) {	// 执行get操作
+				auto value = instance->*ptr_;
+				return make_any_copy(value);
+			}
+			else	// 执行set操作
+			{
+				assert(type_->getKind() == anies[1].getTypeInfo()->getKind());
+				std::variant<char,unsigned char,short,unsigned short,int ,unsigned int,long, unsigned long,
+							long long,unsigned long long,float ,double> value;
+				switch (anies[1].getTypeInfo()->getKind())
+				{
+				case Type::Numeric:
+					switch (anies[1].getTypeInfo()->asNumeric()->getKind())
+					{
+					case Numeric::Char:
+						if (anies[1].getTypeInfo()->asNumeric()->getIsSigned())
+						{
+							value = *static_cast<char*>(anies[1].getPayload());
+						}
+						else
+						{
+							value = *static_cast<unsigned char*>(anies[1].getPayload());
+						}
+						break;
+					case Numeric::Short:
+						if (anies[1].getTypeInfo()->asNumeric()->getIsSigned())
+						{
+							value = *static_cast<short*>(anies[1].getPayload());
+						}
+						else
+						{
+							value = *static_cast<unsigned short*>(anies[1].getPayload());
+						}
+						break;
+					case Numeric::Int:
+						if (anies[1].getTypeInfo()->asNumeric()->getIsSigned())
+						{
+							value = *static_cast<int*>(anies[1].getPayload());
+						}
+						else
+						{
+							value = *static_cast<unsigned int*>(anies[1].getPayload());
+						}
+						break;
+					case Numeric::Long:
+						if (anies[1].getTypeInfo()->asNumeric()->getIsSigned())
+						{
+							value = *static_cast<long*>(anies[1].getPayload());
+						}
+						else
+						{
+							value = *static_cast<unsigned long*>(anies[1].getPayload());
+						}
+						break;
+					case Numeric::LongLong:
+						if (anies[1].getTypeInfo()->asNumeric()->getIsSigned())
+						{
+							value = *static_cast<long long*>(anies[1].getPayload());
+						}
+						else
+						{
+							value = *static_cast<unsigned long long*>(anies[1].getPayload());
+						}
+						break;
+					case Numeric::Float:
+						value = *static_cast<float*>(anies[1].getPayload());
+						break;
+					case Numeric::Double:
+						value = *static_cast<double*>(anies[1].getPayload());
+						break;
+					default:
+						LOG_ERROR("非法的Numeric类型");
+						break;
+					}
+				default:
+					break;
+				}
+
+				switch (type_->getKind())
+				{
+				case Type::Numeric:
+					switch (type_->asNumeric()->getKind())
+					{
+					case Numeric::Char:
+						if (type_->asNumeric()->getIsSigned())
+						{
+							instance->*ptr_ = std::get<char>(value);
+						}
+						else
+						{
+							instance->*ptr_ = std::get<unsigned char>(value);
+						}
+						break;
+					case Numeric::Short:
+						if (type_->asNumeric()->getIsSigned())
+						{
+							instance->*ptr_ = std::get<short>(value);
+						}
+						else
+						{
+							instance->*ptr_ = std::get<unsigned short>(value);
+						}
+						break;
+					case Numeric::Int:
+						if (type_->asNumeric()->getIsSigned())
+						{
+							instance->*ptr_ = std::get<int>(value);
+						}
+						else
+						{
+							instance->*ptr_ = std::get<unsigned int>(value);
+						}
+						break;
+					case Numeric::Long:
+						if (type_->asNumeric()->getIsSigned())
+						{
+							instance->*ptr_ = std::get<long>(value);
+						}
+						else
+						{
+							instance->*ptr_ = std::get<unsigned long>(value);
+						}
+						break;
+					case Numeric::LongLong:
+						if (type_->asNumeric()->getIsSigned())
+						{
+							instance->*ptr_ = std::get<long long>(value);
+						}
+						else
+						{
+							instance->*ptr_ = std::get<unsigned long long>(value);
+						}
+						break;
+					case Numeric::Float:
+						instance->*ptr_ = std::get<float>(value);
+						break;
+					case Numeric::Double:
+						instance->*ptr_ = std::get<double>(value);
+						break;
+					default:
+						LOG_ERROR("非法的Numeric类型");
+						break;
+					}
+				default:
+					break;
+				}
+
+				return make_any_copy(instance->*ptr_);
+			}
+		
+			
 		}
 
-		MemberVariable(const std::string& name,const Type* type)
-			:type_(type), name_(name)
+		MemberVariable(const std::string& name,const Type* type, T Clazz::* ptr)
+			:type_(type), name_(name),ptr_(ptr)
 		{
 
 		}
 
-		static MemberVariable Create(const std::string& name)
+		static MemberVariable Create(const std::string& name, T Clazz::* ptr)
 		{
 
-			return { name , GetType<T>() };
+			return { name , GetType<T>() , ptr};
+		}
+
+		std::string getName() const override
+		{
+			return name_;
 		}
 
 		std::string to_string() const override
@@ -56,22 +231,27 @@ namespace Reflect
 	class MemberFunction : public Member
 	{
 	public:
-		any call(std::vector<any>& args) override
+		any call(const std::vector<any>& args) override
 		{
 			return make_any_copy<int>(1);
 		}
-		MemberFunction(const std::string& name, const Type* ret,const std::vector<const Type*>& params)
-			:name_(name), retType_(ret),paramTypes_(std::move(params))
+		MemberFunction(const std::string& name, const Type* ret,const std::vector<const Type*>& params, Ret(Clazz::* ptr)(Args...))
+			:name_(name), retType_(ret),paramTypes_(std::move(params)),ptr_(ptr)
 		{
 
 		}
-		static MemberFunction Create(const std::string& name)
+		static MemberFunction Create(const std::string& name, Ret(Clazz::* ptr)(Args...))
 		{
 			using args = typename std::tuple<Args...>;
 			bool tag = (std::is_same_v<int, Args> || ...);
 			std::cout << tag << std::endl;
 			std::vector<const Type*> paramTypes = { GetType<Args>()... };
-			return { name, GetType<Ret>(), paramTypes};
+			return { name, GetType<Ret>(), paramTypes, ptr};
+		}
+
+		std::string getName() const override
+		{
+			return name_;
 		}
 
 		std::string to_string() const override
@@ -140,6 +320,18 @@ namespace Reflect
 		void addFunction(MemberFunction<Ret, Clazz, Args...>&& func)
 		{
 			funcs_.emplace_back(std::make_unique<MemberFunction<Ret,Clazz,Args...>>(std::move(func)));
+		}
+
+		Member* getVariable(const std::string& name)
+		{
+			for (const auto& ptr : vars_)
+			{
+				if (ptr->getName() == name)
+				{
+					return ptr.get();
+				}
+			}
+			return nullptr;
 		}
 
 		std::string to_string() const override

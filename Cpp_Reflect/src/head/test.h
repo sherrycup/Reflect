@@ -36,3 +36,18 @@ private:
 
 };
 
+class Person
+{
+public:
+	std::string name;
+	int age;
+	int id;
+
+	Person(const std::string& name, int age, int id)
+		:name(name), age(age), id(id)
+	{
+
+	}
+
+};
+

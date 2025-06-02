@@ -60,6 +60,18 @@ namespace Reflect
 			}
 		}
 
+		Reflect::Class* asClass() const
+		{
+			if (kind_ == Kind::Class)
+			{
+				return (Reflect::Class*)(this);
+			}
+			else
+			{
+				return nullptr;
+			}
+		}
+
 		std::string getName() const { return name_; }
 
 		Type::Kind getKind() const { return this->kind_; }

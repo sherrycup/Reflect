@@ -143,17 +143,17 @@ namespace Reflect
 		}
 
 		template<typename U>
-		ClassFactory& addVariable(const std::string& name)
+		ClassFactory& addVariable(const std::string& name,U ptr)
 		{
 			using temp = typename field_trait<U>::trait;
 			using T = typename temp::type;
 			using Clazz = typename temp::clazz_type;
-			info_.addVariable(MemberVariable<T, Clazz>::Create(name));
+			info_.addVariable(MemberVariable<T, Clazz>::Create(name,ptr));
 			return *this;
 		}
 
 		template<typename U>
-		ClassFactory& addFunction(const std::string& name)
+		ClassFactory& addFunction(const std::string& name, U ptr)
 		{
 			using temp = typename field_trait<U>::trait;
 			using Ret = typename temp::ret_type;
@@ -161,7 +161,7 @@ namespace Reflect
 			using Tuple = typename temp::args;
 
 			std::apply([&](auto... args) {
-				info_.addFunction(MemberFunction<Ret, Clazz, decltype(args)...>::Create(name));
+				info_.addFunction(MemberFunction<Ret, Clazz, decltype(args)...>::Create(name,ptr));
 				}, Tuple{});
 
 			

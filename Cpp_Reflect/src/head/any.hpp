@@ -84,7 +84,7 @@ namespace Reflect
             Ref,
             Move,
             CRef,
-
+            Null,
         };
 
 
@@ -97,7 +97,7 @@ namespace Reflect
         any(void* payload, const Type* typeinfo, type_access store, type_operations* ops);
         any() = default;
         any(const any&);
-        any(any&&);
+        any(any&&) noexcept;
         ~any() {}
 
         const Type* getTypeInfo() const
