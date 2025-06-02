@@ -21,73 +21,6 @@ namespace Reflect
 			Unknown
 		};
 
-		using retType = std::variant<char, unsigned char, short, unsigned short, int, unsigned int, long, unsigned long,
-			long long, unsigned long long, float, double>;
-
-		retType getRealValue(any& elem) const
-		{
-			switch (elem.getTypeInfo()->asNumeric()->getKind())
-			{
-			case Numeric::Char:
-				if (elem.getTypeInfo()->asNumeric()->getIsSigned())
-				{
-					return *static_cast<char*>(elem.getPayload());
-				}
-				else
-				{
-					return *static_cast<unsigned char*>(elem.getPayload());
-				}
-				break;
-			case Numeric::Short:
-				if (elem.getTypeInfo()->asNumeric()->getIsSigned())
-				{
-					return *static_cast<short*>(elem.getPayload());
-				}
-				else
-				{
-					return *static_cast<unsigned short*>(elem.getPayload());
-				}
-				break;
-			case Numeric::Int:
-				if (elem.getTypeInfo()->asNumeric()->getIsSigned())
-				{
-					return *static_cast<int*>(elem.getPayload());
-				}
-				else
-				{
-					return *static_cast<unsigned int*>(elem.getPayload());
-				}
-				break;
-			case Numeric::Long:
-				if (elem.getTypeInfo()->asNumeric()->getIsSigned())
-				{
-					return *static_cast<long*>(elem.getPayload());
-				}
-				else
-				{
-					return *static_cast<unsigned long*>(elem.getPayload());
-				}
-				break;
-			case Numeric::LongLong:
-				if (elem.getTypeInfo()->asNumeric()->getIsSigned())
-				{
-					return *static_cast<long long*>(elem.getPayload());
-				}
-				else
-				{
-					return *static_cast<unsigned long long*>(elem.getPayload());
-				}
-				break;
-			case Numeric::Float:
-				return *static_cast<float*>(elem.getPayload());
-				break;
-			case Numeric::Double:
-				return *static_cast<double*>(elem.getPayload());
-			case Numeric::Unknown:
-				LOG_ERROR("异常类型赋值");
-			}
-		}
-
 		Numeric(const std::string& name, Numeric::Kind kind, bool is_signed)
 			:Type{ name, Type::Kind::Numeric}, kind_(kind), is_signed_(is_signed)
 		{
@@ -135,58 +68,58 @@ namespace Reflect
 				case Numeric::Char:
 					if (elem.getTypeInfo()->asNumeric()->getIsSigned())
 					{
-						*(char*)elem.getPayload() = value;
+						*static_cast<char*>(elem.getPayload()) = value;
 					}
 					else
 					{
-						*(unsigned char*)elem.getPayload() = value;
+						*static_cast<unsigned char*>(elem.getPayload()) = value;
 					}
 					break;
 				case Numeric::Short:
 					if (elem.getTypeInfo()->asNumeric()->getIsSigned())
 					{
-						*(short*)elem.getPayload() = value;
+						*static_cast<short*>(elem.getPayload()) = value;
 					}
 					else
 					{
-						*(unsigned short*)elem.getPayload() = value;
+						*static_cast<unsigned short*>(elem.getPayload()) = value;
 					}
 					break;
 				case Numeric::Int:
 					if (elem.getTypeInfo()->asNumeric()->getIsSigned())
 					{
-						*(int*)elem.getPayload() = value;
+						*static_cast<int*>(elem.getPayload()) = value;
 					}
 					else
 					{
-						*(unsigned int*)elem.getPayload() = value;
+						*static_cast<unsigned int*>(elem.getPayload()) = value;
 					}
 					break;
 				case Numeric::Long:
 					if (elem.getTypeInfo()->asNumeric()->getIsSigned())
 					{
-						*(long*)elem.getPayload() = value;
+						*static_cast<long*>(elem.getPayload()) = value;
 					}
 					else
 					{
-						*(unsigned long*)elem.getPayload() = value;
+						*static_cast<unsigned long*>(elem.getPayload()) = value;
 					}
 					break;
 				case Numeric::LongLong:
 					if (elem.getTypeInfo()->asNumeric()->getIsSigned())
 					{
-						*(long long*)elem.getPayload() = value;
+						*static_cast<long long*>(elem.getPayload()) = value;
 					}
 					else
 					{
-						*(unsigned long long*)elem.getPayload() = value;
+						*static_cast<unsigned long long*>(elem.getPayload()) = value;
 					}
 					break;
 				case Numeric::Float:
-					*(float*)elem.getPayload() = value;
+					*static_cast<float*>(elem.getPayload()) = value;
 					break;
 				case Numeric::Double:
-					*(double*)elem.getPayload() = value;
+					*static_cast<double*>(elem.getPayload()) = value;
 				case Numeric::Unknown:
 					LOG_ERROR( "异常类型赋值");
 				}
@@ -302,23 +235,23 @@ namespace Reflect
 		template<typename T>
 		static Kind getKind()
 		{
-			if constexpr (std::is_same_v<T, char>)
+			if constexpr (std::is_same_v<T, char> || std::is_same_v<T,unsigned char>)
 			{
 				return Kind::Char;
 			}
-			else if constexpr (std::is_same_v<T, short>)
+			else if constexpr (std::is_same_v<T, short> || std::is_same_v<T, unsigned short>)
 			{
 				return Kind::Short;
 			}
-			else if constexpr (std::is_same_v<T, int>)
+			else if constexpr (std::is_same_v<T, int> || std::is_same_v<T, unsigned int>)
 			{
 				return Kind::Int;
 			}
-			else if constexpr (std::is_same_v<T, long>)
+			else if constexpr (std::is_same_v<T, long> || std::is_same_v<T, unsigned long>)
 			{
 				return Kind::Long;
 			}
-			else if constexpr (std::is_same_v<T, long long>)
+			else if constexpr (std::is_same_v<T, long long> || std::is_same_v<T, unsigned long long>)
 			{
 				return Kind::LongLong;
 			}

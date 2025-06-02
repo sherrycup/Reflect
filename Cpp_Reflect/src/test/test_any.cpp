@@ -66,6 +66,8 @@ int main()
 
 	std::cout << ref << std::endl;
 
+	std::cout << Reflect::GetType("ref")->asNumeric()->getValue(test_any) << std::endl;
+
 	LOG_INFO(tem);
 	LOG_INFO("结束");
 
