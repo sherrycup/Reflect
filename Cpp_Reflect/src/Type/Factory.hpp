@@ -127,13 +127,21 @@ namespace Reflect
 
 				break;
 			case Type::Bool:
-
+				if (*static_cast<bool*>(elem.getPayload()))
+				{
+					os << "True";
+				}
+				else
+				{
+					os << "False";
+				}
+				
 				break;
 			case Type::Void:
 
 				break;
 			case Type::String:
-
+				os << *static_cast<std::string*>(elem.getPayload());
 				break;
 			default:
 				break;

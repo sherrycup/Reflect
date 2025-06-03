@@ -83,5 +83,20 @@ int main()
 
 	std::cout << xxxxx->asClass()->getFunction("sum")
 		->call({ Reflect::make_any_ref(person), Reflect::make_any_copy(3), Reflect::make_any_copy(5) }) << std::endl;
+
+	std::string str = "hahahha";
+	Reflect::Register<std::string>().setName("str");
+	auto abc = Reflect::GetType("str");
+	std::cout << abc->asString()->getValue(Reflect::make_any_copy(str)) << std::endl;
+	abc->asString()->setValue("这对吗？对的对的", Reflect::make_any_ref(str));
+	std::cout << abc->asString()->getValue(Reflect::make_any_copy(str)) << std::endl;
+
+
+	bool bool_test = true;
+	Reflect::Register<bool>().setName("bool_test");
+	auto b_test = Reflect::GetType("bool_test");
+	std::cout << b_test->asBool()->getValue(Reflect::make_any_copy(bool_test)) << std::endl;
+	b_test->asBool()->setValue(false, Reflect::make_any_ref(bool_test));
+	std::cout << b_test->asBool()->getValue(Reflect::make_any_copy(bool_test)) << std::endl;
 	return 0;
 }

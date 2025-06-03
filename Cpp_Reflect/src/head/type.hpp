@@ -9,6 +9,7 @@ namespace Reflect
 	class Enum;
 	class Bool;
 	class Void;
+	class String;
 
 
 	/*
@@ -65,6 +66,30 @@ namespace Reflect
 			if (kind_ == Kind::Class)
 			{
 				return (Reflect::Class*)(this);
+			}
+			else
+			{
+				return nullptr;
+			}
+		}
+
+		Reflect::String* asString() const
+		{
+			if (kind_ == Kind::String)
+			{
+				return (Reflect::String*)(this);
+			}
+			else
+			{
+				return nullptr;
+			}
+		}
+
+		Reflect::Bool* asBool() const
+		{
+			if (kind_ == Kind::Bool)
+			{
+				return (Reflect::Bool*)(this);
 			}
 			else
 			{
