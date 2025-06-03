@@ -23,6 +23,17 @@ namespace Reflect
 			Type::name_ = name;
 		}
 		*/
+		void setValue(bool value, const any& elem)
+		{
+			assert(elem.getTypeInfo()->getKind() == Type::Bool);
+			*static_cast<bool*>(elem.getPayload()) = value;
+		}
+
+		any getValue(const any& elem) const
+		{
+			auto value = *static_cast<bool*>(elem.getPayload());
+			return make_any_copy(value);
+		}
 
 		std::string to_string() const override
 		{
