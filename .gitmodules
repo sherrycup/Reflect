@@ -1,0 +1,3 @@
+[submodule "Cpp_Reflect/vendor/spdlog"]
+	path = Cpp_Reflect/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git

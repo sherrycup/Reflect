@@ -108,6 +108,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -131,6 +134,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Dreflect\any.cpp" />
+    <ClCompile Include="src\Log\Log.cpp" />
+    <ClCompile Include="src\test\test_any.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\head\any.hpp" />
+    <ClInclude Include="src\head\test.h" />
+    <ClInclude Include="src\head\type.hpp" />
+    <ClInclude Include="src\Log\Log.h" />
+    <ClInclude Include="src\Dreflect\register.hpp" />
+    <ClInclude Include="src\Sreflect\sref_method.hpp" />
+    <ClInclude Include="src\Sreflect\static_register.hpp" />
+    <ClInclude Include="src\Traits\field_trait.hpp" />
+    <ClInclude Include="src\Traits\function_traits.hpp" />
+    <ClInclude Include="src\Traits\utils.hpp" />
+    <ClInclude Include="src\Traits\variable_traits.hpp" />
+    <ClInclude Include="src\Type\Bool.hpp" />
+    <ClInclude Include="src\Type\Class.hpp" />
+    <ClInclude Include="src\Type\Enum.hpp" />
+    <ClInclude Include="src\Type\Factory.hpp" />
+    <ClInclude Include="src\Type\GFunc.hpp" />
+    <ClInclude Include="src\Type\Numeric.hpp" />
+    <ClInclude Include="src\Type\String.hpp" />
+    <ClInclude Include="src\Type\TypeFactory.hpp" />
+    <ClInclude Include="src\Type\TypenameList.hpp" />
+    <ClInclude Include="src\Type\Void.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
