@@ -73,12 +73,15 @@ int main()
 
 	Person person("nmsl", 30, 10);
 	Reflect::Register<Person>().setName("person").addVariable("name", &Person::name).addVariable("age", &Person::age)
-		.addVariable("id", &Person::id);
+		.addVariable("id", &Person::id).addFunction("sum",&Person::sum);
 
 	auto xxxxx = Reflect::GetType("person");
 	auto var = xxxxx->asClass()->getVariable("age")->call({ Reflect::make_any_ref(person) });
 	std::cout << var << std::endl;
 	xxxxx->asClass()->getVariable("age")->call({ Reflect::make_any_ref(person), Reflect::make_any_copy(20)});
 	std::cout << xxxxx->asClass()->getVariable("age")->call({ Reflect::make_any_ref(person) }) << std::endl;
+
+	std::cout << xxxxx->asClass()->getFunction("sum")
+		->call({ Reflect::make_any_ref(person), Reflect::make_any_copy(3), Reflect::make_any_copy(5) }) << std::endl;
 	return 0;
 }

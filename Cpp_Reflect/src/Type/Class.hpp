@@ -7,6 +7,18 @@
 
 namespace Reflect
 {
+	template<typename T>
+	T unwrap(const any& value)
+	{
+		return *(T*)value.getPayload();
+	}
+
+	template<typename Ret,typename Clazz, typename... Args, size_t... Idx>
+	any inner_call(Ret(Clazz::*ptr)(Args...), const std::vector<any>& params,std::index_sequence<Idx...> )
+	{
+		auto return_value = ((Clazz*)params[0].getPayload()->*ptr)(unwrap<Args>(params[Idx + 1])...);
+		return make_any_copy(return_value);
+	}
 	// 先行声明函数
 	template<typename T>
 	const Type* GetType();
@@ -231,9 +243,17 @@ namespace Reflect
 	class MemberFunction : public Member
 	{
 	public:
-		any call(const std::vector<any>& args) override
+		/*
+			直接调用函数 第一个参数是类实例 后面的参数是所需要的参数
+		*/
+		any call(const std::vector<any>& anies) override
 		{
-			return make_any_copy<int>(1);
+			assert(anies.size() == paramTypes_.size() + 1);
+			for (int i = 0;i < paramTypes_.size();i++)
+			{
+				assert(paramTypes_[i] == anies[i + 1].getTypeInfo());
+			}
+			return inner_call(ptr_, anies, std::make_index_sequence<sizeof...(Args)>());
 		}
 		MemberFunction(const std::string& name, const Type* ret,const std::vector<const Type*>& params, Ret(Clazz::* ptr)(Args...))
 			:name_(name), retType_(ret),paramTypes_(std::move(params)),ptr_(ptr)
@@ -327,6 +347,18 @@ namespace Reflect
 			for (const auto& ptr : vars_)
 			{
 				if (ptr->getName() == name)
+				{
+					return ptr.get();
+				}
+			}
+			return nullptr;
+		}
+
+		Member* getFunction(const std::string& name)
+		{
+			for (const auto& ptr : funcs_)
+			{
+				if(ptr->getName() == name)
 				{
 					return ptr.get();
 				}
