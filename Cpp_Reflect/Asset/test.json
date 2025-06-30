@@ -1,0 +1,51 @@
+{
+    "class_name": "test",
+    "functions": [
+        {
+            "Access": "Public",
+            "Name": "output_num",
+            "Param": "(float)",
+            "RetType": "int"
+        },
+        {
+            "Access": "Public",
+            "Name": "plus",
+            "Param": "(int, int)",
+            "RetType": "int"
+        },
+        {
+            "Access": "Private",
+            "Name": "show",
+            "Param": "()",
+            "RetType": "Void"
+        },
+        {
+            "Access": "Private",
+            "Name": "what",
+            "Param": "()",
+            "RetType": "double"
+        }
+    ],
+    "variables": [
+        {
+            "Access": "Public",
+            "Name": "a",
+            "Type": "int"
+        },
+        {
+            "Access": "Private",
+            "Name": "b",
+            "Type": "float"
+        },
+        {
+            "Access": "Private",
+            "Name": "c",
+            "Type": "char"
+        },
+        {
+            "Access": "Public",
+            "Name": "s",
+            "Type": "string"
+        }
+    ]
+}

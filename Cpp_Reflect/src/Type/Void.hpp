@@ -25,7 +25,15 @@ namespace Reflect
 
 		std::string to_string() const override
 		{
-			return "Void " + this->getName();
+			if (this->getName().empty())
+			{
+				return "Void";
+			}
+			else
+			{
+				return "Void " + this->getName();
+			}
+			
 		}
 
 		static Void Create()

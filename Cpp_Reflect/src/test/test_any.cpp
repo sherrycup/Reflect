@@ -3,6 +3,7 @@
 #include <iostream>
 #include"Sreflect/static_register.hpp"
 #include"Sreflect/sref_method.hpp"
+#include"Sreflect/Serialization.hpp"
 #include"Dreflect/register.hpp"
 
 
@@ -17,15 +18,27 @@ int main()
 	std::cout << "Hello World！" << std::endl;
 	LOG_INFO("对的对的");
 
-	//auto typeinfo = TypeInfo<test>();
-	//std::vector<std::string_view> names = Reflect::getDeclearedField(typeinfo.variables,std::make_index_sequence<typeinfo.func_size>());
+	auto typeinfo = TypeInfo<test>();
+	// 生成序列化json文件
+	// 
+	std::vector<Reflect::Access> acc;
+	Reflect::JsonGenerator::GetInstance().CreatJson(typeinfo);
+	LOG_INFO("生成json文件");
 
-	//for (auto& str : names)
-	//{
-	//	std::cout << str << std::endl;
-	//}
+	std::vector<std::string> names = Reflect::getDeclearedField(typeinfo,acc);
+
+	for (auto& str : names)
+	{
+		std::cout << str << std::endl;
+	}
 	bool zyd;
 
+	for (auto& e : acc)
+	{
+		std::cout << e << std::endl;
+	}
+
+	std::cout << "++++++++++" << std::endl;
 	Reflect::Register<decltype(zyd)>().setName("zyd");
 
 	auto temp = Reflect::GetType("zyd");

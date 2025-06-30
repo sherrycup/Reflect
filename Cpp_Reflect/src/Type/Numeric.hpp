@@ -50,7 +50,15 @@ namespace Reflect
 
 		std::string to_string() const override
 		{
-			return detectName(kind_) + " " + this->getName();
+			if (this->getName().empty())
+			{
+				return detectName(kind_);
+			}
+			else
+			{
+				return detectName(kind_) + " " + this->getName();
+			}
+			
 		}
 
 		template<typename T>

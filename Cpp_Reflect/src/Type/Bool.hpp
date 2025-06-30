@@ -37,7 +37,16 @@ namespace Reflect
 
 		std::string to_string() const override
 		{
-			return "Bool " + this->getName();
+			if (this->getName().empty())
+			{
+				return "Bool";
+			}
+			else
+			{
+				return "Bool " + this->getName();
+			}
+						
+			
 		}
 
 		static Bool Create()

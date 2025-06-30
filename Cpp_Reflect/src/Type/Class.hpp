@@ -263,8 +263,8 @@ namespace Reflect
 		static MemberFunction Create(const std::string& name, Ret(Clazz::* ptr)(Args...))
 		{
 			using args = typename std::tuple<Args...>;
-			bool tag = (std::is_same_v<int, Args> || ...);
-			std::cout << tag << std::endl;
+			//bool tag = (std::is_same_v<int, Args> || ...);
+			//std::cout << tag << std::endl;
 			std::vector<const Type*> paramTypes = { GetType<Args>()... };
 			return { name, GetType<Ret>(), paramTypes, ptr};
 		}

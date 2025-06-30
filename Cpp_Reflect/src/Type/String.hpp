@@ -32,7 +32,14 @@ namespace Reflect
 
 		std::string to_string() const override
 		{
-			return "String " + this->getName();
+			if (this->getName().empty())
+			{
+				return "string";
+			}
+			else {
+				return "string " + this->getName();
+			}
+			
 		}
 
 		static String Create()

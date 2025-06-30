@@ -89,5 +89,11 @@
     <ClInclude Include="src\Type\String.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="vendor\json\include\nlohmann\json.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sreflect\Serialization.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

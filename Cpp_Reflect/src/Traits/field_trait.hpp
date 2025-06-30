@@ -4,6 +4,7 @@
 
 #include"function_traits.hpp"
 #include"variable_traits.hpp"
+#include"nlohmann/json.hpp"
 
 namespace Reflect
 {
@@ -65,7 +66,7 @@ struct TypeInfo{};
 #define Reflectable(X) friend TypeInfo<X>; using selfType = X;
 
 
-#define Begin_Class(X) template<> struct TypeInfo<X> {
+#define Begin_Class(X) template<> struct TypeInfo<X> {	std::string_view name = #X;
 	
 
 #define functions(...)	\
