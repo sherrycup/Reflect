@@ -3,7 +3,7 @@
 #include <iostream>
 #include"Sreflect/static_register.hpp"
 #include"Sreflect/sref_method.hpp"
-#include"Sreflect/Serialization.hpp"
+#include"Serialize/JsonGenerator.hpp"
 #include"Dreflect/register.hpp"
 
 
