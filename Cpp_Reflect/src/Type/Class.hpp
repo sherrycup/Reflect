@@ -309,6 +309,92 @@ namespace Reflect
 		Ret(Clazz::* ptr_)(Args...)  ;
 	};
 
+	class Ctor
+	{
+	public:
+		Ctor() {}
+		virtual any createInstance(const std::vector<any>& anies) const = 0;
+		virtual Access getAccess() const = 0;
+		virtual std::vector<const Type*> getParam() const = 0;
+	private:
+		
+		
+	protected:
+
+	};
+
+	template<typename Class,typename... Args>
+	class CtorFunc : public Ctor
+	{
+	public:
+		CtorFunc(const std::vector<const Type*>& param, std::function <Class* (const std::vector<any>&)> invoke,Access acc)
+			:paramType_(param), invoker(invoke), access(acc)
+		{
+
+		}
+
+		/*
+			生成构造函数包装
+		*/
+		static CtorFunc Create(Access access)
+		{
+			std::vector<const Type*> param = { GetType<Args>()... };
+			auto invoke = [](const std::vector<any>& anies) -> Class*
+				{
+					// 检查参数数量是否匹配
+					assert(anies.size() == sizeof...(Args), "构造参数数量不匹配");
+
+					// 
+					return createClass2Any<Class, Args...>(anies);
+				};
+
+			return {param, invoke, access};
+		}
+
+		/*
+			生成实例
+		*/
+		any createInstance(const std::vector<any>& anies) const override
+		{
+			Class* obj = invoker(anies);
+			return make_any_copy(obj);
+		}
+
+		/*
+			返回变量
+		*/
+		Access getAccess() const override { return access; }
+		std::vector<const Type*> getParam() const override{ return paramType_; }
+
+		/*
+			输出字符
+		*/
+		std::string to_string() const
+		{
+
+		}
+	private:
+		std::function <Class*(const std::vector<any>&)> invoker;
+		std::vector<const Type*> paramType_;
+		Access access;
+
+		template<typename Class, typename... Args>
+		static Class* createClass2Any(const std::vector<any>& anies)
+		{
+			return cvtParam2TypeParam<Class, Args...>(
+				anies,
+				std::make_index_sequence<sizeof...(Args)>{}
+			);
+		}
+
+		template<typename Class, typename... Args, size_t... I>
+		static Class* cvtParam2TypeParam(const std::vector<any>& anies, std::index_sequence<I...>)
+		{
+			Class* obj = new Class(*cast_any_const<Args>(anies[I])...);
+			return obj;
+		}
+	};
+
 	class Class : public Type
 	{
 	public:
@@ -342,6 +428,13 @@ namespace Reflect
 			funcs_.emplace_back(std::make_unique<MemberFunction<Ret,Clazz,Args...>>(std::move(func)));
 		}
 
+		template<typename Class,typename... Args>
+		void addCtor(CtorFunc<Class,Args...>&& ctor)
+		{
+			ctors_.emplace_back(std::make_unique<CtorFunc<Class,Args...>>(std::move(ctor)));
+			LOG_INFO("注册构造函数结束");
+		}
+
 		Member* getVariable(const std::string& name)
 		{
 			for (const auto& ptr : vars_)
@@ -364,6 +457,39 @@ namespace Reflect
 				}
 			}
 			return nullptr;
+		}
+
+		any createInstance(const std::vector<any>& anies)
+		{
+			bool findctor = true;
+			// 找到符合参数列表的构造函数
+			for (const auto& ptr : ctors_)
+			{
+				findctor = true;
+				if (ptr->getAccess() != Access::Public || ptr->getParam().size() != anies.size())
+				{
+					// 不是public构造函数无法调用
+					continue;
+				}
+				else 
+				{
+					std::vector<const Type*> types = ptr->getParam();
+					// 对比函数参数和现有参数一一对应的关系
+					for (int i=0;i< types.size();i++)
+					{
+						if (types[i] != anies[i].getTypeInfo())
+						{
+							findctor = false;
+							break;
+						}
+					}
+				}
+				if (findctor)
+				{
+					return ptr->createInstance(anies);
+				}
+			}
+			assert(findctor,"无法生成实例");
 		}
 
 		std::string to_string() const override
@@ -409,5 +535,6 @@ namespace Reflect
 	private:
 		std::vector<std::unique_ptr<Member>> vars_;
 		std::vector<std::unique_ptr<Member>> funcs_;
+		std::vector<std::unique_ptr<Ctor>> ctors_;
 	};
 }

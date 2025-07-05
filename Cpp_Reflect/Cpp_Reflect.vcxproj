@@ -145,6 +145,7 @@
     <ClInclude Include="src\Log\Log.h" />
     <ClInclude Include="src\Dreflect\register.hpp" />
     <ClInclude Include="src\Serialize\JsonGenerator.hpp" />
+    <ClInclude Include="src\Serialize\JsonLoader.hpp" />
     <ClInclude Include="src\Sreflect\sref_method.hpp" />
     <ClInclude Include="src\Sreflect\static_register.hpp" />
     <ClInclude Include="src\Traits\field_trait.hpp" />

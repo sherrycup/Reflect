@@ -95,5 +95,8 @@
     <ClInclude Include="src\Serialize\JsonGenerator.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\Serialize\JsonLoader.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

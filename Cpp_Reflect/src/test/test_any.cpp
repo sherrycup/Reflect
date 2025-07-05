@@ -79,8 +79,11 @@ int main()
 
 	std::cout << ref << std::endl;
 
+	LOG_INFO("===================");
+
 	std::cout << Reflect::GetType("ref")->asNumeric()->getValue(test_any) << std::endl;
 
+	std::cout << tem << std::endl;
 	LOG_INFO(tem);
 	LOG_INFO("结束");
 
@@ -111,5 +114,11 @@ int main()
 	std::cout << b_test->asBool()->getValue(Reflect::make_any_copy(bool_test)) << std::endl;
 	b_test->asBool()->setValue(false, Reflect::make_any_ref(bool_test));
 	std::cout << b_test->asBool()->getValue(Reflect::make_any_copy(bool_test)) << std::endl;
+
+
+	// 构造函数注册
+	Reflect::Register<test>().setName("test").addCtor<test, int, std::string>(Reflect::Public).addVariable("a", &test::a)
+		.addVariable("s",&test::s);
+
 	return 0;
 }

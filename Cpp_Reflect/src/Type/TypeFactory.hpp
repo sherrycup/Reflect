@@ -167,6 +167,22 @@ namespace Reflect
 			
 			return *this;
 		}
+ 
+		// 添加构造函数
+		template<typename Class, typename... Args>
+		ClassFactory& addCtor(Access access)
+		{
+			info_.addCtor(CtorFunc<Class,Args...>::Create(access));
+			return *this;
+		}
+
+		// 无参构造函数
+		template<typename Class>
+		ClassFactory& addCtor(Access access)
+		{
+			info_.addCtor(CtorFunc<Class>::Create(access));
+			return *this;
+		}
 
 		const Class* getInfo() const { return &info_; }
 	protected:

@@ -10,9 +10,23 @@ namespace Reflect
 	}
 
 	any::any(const any& other)
-		:payload(other.payload),typeinfo(other.typeinfo),store(other.store),ops(other.ops)
+		:typeinfo(other.typeinfo),store(other.store),ops(other.ops)
 	{
-
+		if (other.payload != nullptr)
+		{
+			if (store == Copy)
+			{
+				payload = ops->copy_construct(other.payload);
+			}
+			else
+			{
+				payload = other.payload;
+			}
+		}
+		else
+		{
+			payload = nullptr;
+		}
 	}
 
 	any::any(any&& other) noexcept

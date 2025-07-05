@@ -16,4 +16,7 @@ variables(
 	var_private(&test::c),
 	var_public(&test::s)
 	)
+constructions(
+
+)
 End_Class()

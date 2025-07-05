@@ -77,6 +77,7 @@ struct TypeInfo{};
 	static constexpr auto variables = std::make_tuple(##__VA_ARGS__); \
 	static constexpr size_t var_size = std::tuple_size_v<decltype(variables)>;
 
+#define constructions(...)
 
 #define func_public(F) \
 	field_trait {F, #F, Reflect::Access::Public}
@@ -90,6 +91,13 @@ struct TypeInfo{};
 #define var_private(V) \
 	field_trait {V, #V, Reflect::Access::Private}
 #define var_protected(V) \
+	field_trait {V, #V, Reflect::Access::Protected}
+
+#define ctor_public(V) \
+	field_trait {V, #V, Reflect::Access::Public}
+#define ctor_private(V) \
+	field_trait {V, #V, Reflect::Access::Private}
+#define ctor_protected(V) \
 	field_trait {V, #V, Reflect::Access::Protected}
 
 #define End_Class() }; 

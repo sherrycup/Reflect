@@ -32,7 +32,7 @@ namespace Reflect
     template <typename T>
     struct type_operation_traits {
         static void destroy(void* elem) {
-            delete[](T*)(elem);
+            delete (T*)(elem);
 
         }
 
@@ -48,6 +48,38 @@ namespace Reflect
 
         static auto& get_operations() {
             using traits = type_operation_traits<T>;
+
+            static type_operations operations = {
+                traits::destroy,
+                traits::copy_construct,
+                traits::steal_construct
+            };
+            return operations;
+        }
+    };
+
+    // 对指针类型进行特化
+    template <typename T>
+    struct type_operation_traits<T*> {
+        static void destroy(void* elem) {
+            T* ptr = *static_cast<T**>(elem);
+            delete ptr;  // 删除实际对象
+            delete static_cast<T**>(elem);  // 删除存储指针的内存
+
+        }
+
+        static void* copy_construct(void* elem) {
+            T* original = *static_cast<T**>(elem);
+            return new T*(new T(*original));  // 深拷贝
+        }
+
+        static void* steal_construct(void* elem) {
+            return new T{ std::move(*(T*)elem) };
+
+        }
+
+        static auto& get_operations() {
+            using traits = type_operation_traits<T*>;
 
             static type_operations operations = {
                 traits::destroy,
@@ -98,7 +130,14 @@ namespace Reflect
         any() = default;
         any(const any&);
         any(any&&) noexcept;
-        ~any() {}
+        ~any() 
+        {
+            if (store == Copy && payload != nullptr && ops != nullptr)
+            {
+                ops->destroy(payload);
+            }
+            payload = nullptr;
+        }
 
         const Type* getTypeInfo() const
         {
@@ -124,7 +163,7 @@ namespace Reflect
 
         elem = new T{ value };
 
-        type_operations ops = type_operation_traits<T>::get_operations();
+        static type_operations ops = type_operation_traits<T>::get_operations();
         return { elem, GetType<T>(),any::Copy, &ops };
     }
     template<typename T> any make_any_ref(T& value)
@@ -133,7 +172,7 @@ namespace Reflect
         void* elem = nullptr;
         elem = (void*)&value;
 
-        type_operations ops = type_operation_traits<T>::get_operations();
+        static type_operations ops = type_operation_traits<T>::get_operations();
         return { elem,GetType<T>(), any::Ref, &ops };
     }
     template<typename T> const any make_any_cref(const T& value)
@@ -142,7 +181,7 @@ namespace Reflect
         void* elem = nullptr;
         elem = (void*)&value;
 
-        type_operations ops = type_operation_traits<T>::get_operations();
+        static type_operations ops = type_operation_traits<T>::get_operations();
         return { elem,GetType<T>(), any::CRef, &ops };
     }
     template<typename T> T* cast_any(any& a)
@@ -151,7 +190,11 @@ namespace Reflect
 
         return  static_cast<T*>(a.payload);
     }
-    template<typename T> T* cast_any_const(const any& a);
+    template<typename T> T* cast_any_const(const any& a)
+    {
+        return  static_cast<T*>(a.payload);
+
+    }
 
 }
 
