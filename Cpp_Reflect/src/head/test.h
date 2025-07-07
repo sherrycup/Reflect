@@ -14,7 +14,7 @@ public:
 	test(int a, std::string s)
 		:a(a), s(s)
 	{
-
+		LOG_INFO("test实例化生成");
 	}
 
 	int output_num(float x)

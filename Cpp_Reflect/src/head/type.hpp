@@ -22,6 +22,7 @@ namespace Reflect
 		template<typename T>
 		friend class NumericFactory;
 
+		template<typename T>
 		friend class ClassFactory;
 
 		friend class EnumFactory;

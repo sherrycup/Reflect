@@ -6,6 +6,14 @@
 
 namespace Reflect
 {
+    enum Variant
+    {
+        NullType,
+        ValueType,
+        PointerType,
+        ReferenceType
+    };
+
     template<typename T>
     const Type* GetType();
 
@@ -126,7 +134,7 @@ namespace Reflect
             //LOG_INFO(*str);
         }
 
-        any(void* payload, const Type* typeinfo, type_access store, type_operations* ops);
+        any(void* payload, const Type* typeinfo, type_access store, type_operations* ops, Variant v);
         any() = default;
         any(const any&);
         any(any&&) noexcept;
@@ -148,12 +156,34 @@ namespace Reflect
         {
             return payload;
         }
+
+        Variant getVariant() const
+        {
+            return variant;
+        }
     private:
         void* payload;
         type_access store;
         type_operations* ops;
         const Type* typeinfo{};
+        Variant variant;
+
+        
     };
+
+    // 获取类型函数
+    template<typename T>
+    Variant detectVariant()
+    {
+        Variant v = Variant::ValueType;
+        if (std::is_pointer_v<T>) {
+            v = Variant::PointerType;
+        }
+        else if constexpr (std::is_reference_v<T>) {
+            v = Variant::ReferenceType;
+        }
+        return v;
+    }
 
     // 声明友元函数实现
     template<typename T> any make_any_copy(const T& value)
@@ -164,7 +194,7 @@ namespace Reflect
         elem = new T{ value };
 
         static type_operations ops = type_operation_traits<T>::get_operations();
-        return { elem, GetType<T>(),any::Copy, &ops };
+        return { elem, GetType<T>(),any::Copy, &ops,  detectVariant<T>()};
     }
     template<typename T> any make_any_ref(T& value)
     {
@@ -173,7 +203,7 @@ namespace Reflect
         elem = (void*)&value;
 
         static type_operations ops = type_operation_traits<T>::get_operations();
-        return { elem,GetType<T>(), any::Ref, &ops };
+        return { elem,GetType<T>(), any::Ref, &ops , detectVariant<T>() };
     }
     template<typename T> const any make_any_cref(const T& value)
     {
@@ -182,7 +212,7 @@ namespace Reflect
         elem = (void*)&value;
 
         static type_operations ops = type_operation_traits<T>::get_operations();
-        return { elem,GetType<T>(), any::CRef, &ops };
+        return { elem,GetType<T>(), any::CRef, &ops , detectVariant<T>() };
     }
     template<typename T> T* cast_any(any& a)
     {

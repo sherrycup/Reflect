@@ -120,5 +120,12 @@ int main()
 	Reflect::Register<test>().setName("test").addCtor<test, int, std::string>(Reflect::Public).addVariable("a", &test::a)
 		.addVariable("s",&test::s);
 
+	//std::cout << std::is_class_v<test> << " " << std::is_class_v<test*> << std::endl;;
+	Reflect::any classInstance = Reflect::GetType<test>()->asClass()->createInstance({Reflect::make_any_copy(1),Reflect::make_any_copy(std::string("卓一刀"))});
+	std::cout << classInstance << std::endl;
+	// 
+	// 实例创建完成 利用反射获取初始化数据
+	std::cout << Reflect::GetType<test>()->asClass()->getVariables("s", { classInstance }) << std::endl;
+
 	return 0;
 }

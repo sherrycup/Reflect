@@ -122,6 +122,7 @@ namespace Reflect
 		VoidFactory(Void&& info) : info_(std::move(info)) {}
 	};
 
+	template<typename T>
 	class ClassFactory
 	{
 	public:
@@ -190,6 +191,7 @@ namespace Reflect
 	private:
 		Class info_;
 		ClassFactory(Class&& info) : info_(std::move(info)) {}
+
 	};
 
 	class StringFactory

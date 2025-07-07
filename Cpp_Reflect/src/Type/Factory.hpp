@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "TypeFactory.hpp"
+#include "Traits/utils.hpp"
 
 namespace Reflect
 {
@@ -10,6 +11,7 @@ namespace Reflect
 	public:
 		static auto& GetFactory()
 		{
+			using RawT = typename remove_const_pointer<T>::type;
 			if constexpr (std::is_same_v<T, bool>)
 			{
 				return BoolFactory::GetInstance();
@@ -30,9 +32,17 @@ namespace Reflect
 			{
 				return EnumFactory::GetInstance();
 			}
-			else if constexpr (std::is_class_v<T>)
+			else if constexpr (std::is_class_v<RawT>)
 			{
-				return ClassFactory::GetInstace();
+				// 确定类型变体
+				
+				if constexpr (std::is_pointer_v<T>) {
+					
+				}
+				else if constexpr (std::is_reference_v<T>) {
+					
+				}
+				return ClassFactory<RawT>::GetInstace();
 			}
 			else
 			{
@@ -121,7 +131,7 @@ namespace Reflect
 
 				break;
 			case Type::Class:
-
+				os << type->getName();
 				break;
 			case Type::GFunc:
 

@@ -7,6 +7,7 @@
 
 namespace Reflect
 {
+
 	template<typename T>
 	T unwrap(const any& value)
 	{
@@ -55,7 +56,19 @@ namespace Reflect
 		{
 			// 判定大小在1-2之间 且第一个参数是类实例
 			assert(anies.size()!=0 && anies.size()<=2 && anies[0].getTypeInfo() == GetType<Clazz>());
-			Clazz* instance = (Clazz*)anies[0].getPayload();	// 强转
+			Variant variant = anies[0].getVariant();
+			Clazz* instance;
+			if (variant == Variant::ValueType || variant == Variant::ReferenceType)
+			{
+				// 此时void*储存的是指向类对象的指针
+				instance = (Clazz*)anies[0].getPayload();	// 强转
+			}
+			else
+			{
+				// 此时void*储存的是指向类指针的指针
+				instance = *(Clazz**)anies[0].getPayload(); // 解引强转
+			}
+			
 			if (anies.size() == 1) {	// 执行get操作
 				auto value = instance->*ptr_;
 				return make_any_copy(value);
@@ -327,6 +340,7 @@ namespace Reflect
 	class CtorFunc : public Ctor
 	{
 	public:
+		
 		CtorFunc(const std::vector<const Type*>& param, std::function <Class* (const std::vector<any>&)> invoke,Access acc)
 			:paramType_(param), invoker(invoke), access(acc)
 		{
@@ -404,6 +418,7 @@ namespace Reflect
 
 		}
 
+
 		std::string getName() const
 		{
 			return Type::name_;
@@ -445,6 +460,18 @@ namespace Reflect
 				}
 			}
 			return nullptr;
+		}
+
+		any getVariables(const std::string& name, const std::vector<any>& anies)
+		{
+			for (const auto& ptr : vars_)
+			{
+				if (ptr->getName() == name)
+				{
+					return ptr.get()->call(anies);
+				}
+			}
+			//return nullptr;
 		}
 
 		Member* getFunction(const std::string& name)
