@@ -15,9 +15,19 @@ namespace Reflect
 	}
 
 	template<typename Ret,typename Clazz, typename... Args, size_t... Idx>
-	any inner_call(Ret(Clazz::*ptr)(Args...), const std::vector<any>& params,std::index_sequence<Idx...> )
+	any inner_call(Ret(Clazz::*ptr)(Args...), const std::vector<any>& params,std::index_sequence<Idx...>)
 	{
-		auto return_value = ((Clazz*)params[0].getPayload()->*ptr)(unwrap<Args>(params[Idx + 1])...);
+		Variant variant = params[0].getVariant();
+		Ret return_value;
+		if (variant == Variant::ValueType || variant == Variant::ReferenceType)
+		{
+			return_value = ((Clazz*)params[0].getPayload()->*ptr)(unwrap<Args>(params[Idx + 1])...);
+		}
+		else
+		{
+			return_value = (*(Clazz**)params[0].getPayload()->*ptr)(unwrap<Args>(params[Idx + 1])...);
+		}
+		
 		return make_any_copy(return_value);
 	}
 	// 先行声明函数
@@ -462,7 +472,7 @@ namespace Reflect
 			return nullptr;
 		}
 
-		any getVariables(const std::string& name, const std::vector<any>& anies)
+		any getVariable(const std::string& name, const std::vector<any>& anies)
 		{
 			for (const auto& ptr : vars_)
 			{
@@ -486,37 +496,57 @@ namespace Reflect
 			return nullptr;
 		}
 
-		any createInstance(const std::vector<any>& anies)
+		any getFunction(const std::string& name, const std::vector<any>& anies)
 		{
-			bool findctor = true;
-			// 找到符合参数列表的构造函数
-			for (const auto& ptr : ctors_)
+			for (const auto& ptr : vars_)
 			{
-				findctor = true;
-				if (ptr->getAccess() != Access::Public || ptr->getParam().size() != anies.size())
+				if (ptr->getName() == name)
 				{
-					// 不是public构造函数无法调用
-					continue;
-				}
-				else 
-				{
-					std::vector<const Type*> types = ptr->getParam();
-					// 对比函数参数和现有参数一一对应的关系
-					for (int i=0;i< types.size();i++)
-					{
-						if (types[i] != anies[i].getTypeInfo())
-						{
-							findctor = false;
-							break;
-						}
-					}
-				}
-				if (findctor)
-				{
-					return ptr->createInstance(anies);
+					return ptr.get()->call(anies);
 				}
 			}
-			assert(findctor,"无法生成实例");
+			//return nullptr;
+		}
+
+		any createInstance(const std::vector<any>& anies)
+		{
+			try {
+				bool findctor = true;
+				// 找到符合参数列表的构造函数
+				for (const auto& ptr : ctors_)
+				{
+					findctor = true;
+					if (ptr->getAccess() != Access::Public || ptr->getParam().size() != anies.size())
+					{
+						// 不是public构造函数无法调用
+						findctor = false;
+					}
+					else
+					{
+						std::vector<const Type*> types = ptr->getParam();
+						// 对比函数参数和现有参数一一对应的关系
+						for (int i = 0;i < types.size();i++)
+						{
+							if (types[i] != anies[i].getTypeInfo())
+							{
+								findctor = false;
+								break;
+							}
+						}
+					}
+					if (findctor)
+					{
+						return ptr->createInstance(anies);
+					}
+				}
+				throw std::runtime_error("没有合适的实例");
+			}
+			catch(const std::exception e)
+			{
+				LOG_ERROR("无法生成实例");
+				
+			}
+			
 		}
 
 		std::string to_string() const override

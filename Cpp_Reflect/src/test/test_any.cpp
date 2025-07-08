@@ -118,6 +118,7 @@ int main()
 
 	// 构造函数注册
 	Reflect::Register<test>().setName("test").addCtor<test, int, std::string>(Reflect::Public).addVariable("a", &test::a)
+		.addFunction("plus",&test::plus)
 		.addVariable("s",&test::s);
 
 	//std::cout << std::is_class_v<test> << " " << std::is_class_v<test*> << std::endl;;
@@ -125,7 +126,10 @@ int main()
 	std::cout << classInstance << std::endl;
 	// 
 	// 实例创建完成 利用反射获取初始化数据
-	std::cout << Reflect::GetType<test>()->asClass()->getVariables("s", { classInstance }) << std::endl;
+	std::cout << Reflect::GetType<test>()->asClass()->getVariable("s", { classInstance }) << std::endl;
+	std::cout << Reflect::GetType<test>()->asClass()->getFunction("plus")->call({ classInstance,Reflect::make_any_copy(1) , Reflect::make_any_copy(2) }) << std::endl;
+
+	Reflect::any classInstance1 = Reflect::GetType<test>()->asClass()->createInstance({ });
 
 	return 0;
 }
